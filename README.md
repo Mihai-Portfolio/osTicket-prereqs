@@ -32,7 +32,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <p>
   
-![image](https://github.com/user-attachments/assets/2ff73c5e-c437-49cf-8ffb-f9a8772c1267)
+![image](https://github.com/user-attachments/assets/675a9298-f055-49f2-9341-079ccdba044e)
+
 
 </p>
 <p>
@@ -44,7 +45,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Once inside the osTicket virtual machine, enable IIS in Windows. To do this, open the control panal in the Windows tab, check in the box for Internet Information Services and expand. Once expanded, expand the 
 </p>
 <br />
 
