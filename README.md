@@ -68,4 +68,4 @@ Once you create the PHP folder in the (C:)Drive, go to Downloads > Installation 
 
 
 
-Next, open IIS as an admin. 
+Next, open IIS as an admin and register PHP within IIS. After registering PHP, click on 
