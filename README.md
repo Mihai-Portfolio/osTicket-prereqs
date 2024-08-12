@@ -65,7 +65,7 @@ Use the following link to download the all the prerequisits - https://drive.goog
 
 
 
-Once you create the PHP folder in the (C:)Drive, go to Downloads > Installation Files > php-7.3.8-nts-Win32-VC15-x86.zip and extract the file into your newly created PHP folder in your (C:)Drive. Next, install VC redist.x86.exe, and MySQL 5.5.62-win32.msi. When installing MySQL, do a typical setup and a standard configuration. Keeping a simple password for this tutorial is best for the first few times, I recommend making it Password1 for your root password when setting up MySQL. 
+Once you create the PHP folder in the (C:)Drive, go to Downloads > Installation Files > php-7.3.8-nts-Win32-VC15-x86.zip and extract the file into your newly created PHP folder in your (C:)Drive. Next, install VC redist.x86.exe, and MySQL 5.5.62-win32.msi. When installing MySQL, do a typical setup and a standard configuration. Keeping a simple password for this tutorial is best for the first few times. I recommend using Password1 as your root password when setting up MySQL. 
 
 ![image](https://github.com/user-attachments/assets/3219d292-d096-4681-9ba5-68dfcb180185)
 
