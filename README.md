@@ -48,7 +48,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 </p>
 <p>
-Once inside the osTicket virtual machine, enable IIS in Windows. To do this, open the Control Panal in the Windows tab, click Programs, then click Turn Windows Features on or off. Check in the box for Internet Information Services and expand. Once expanded, expand World Wide Web Services, open Application Development Features and select CGI. Expand on Common HTTP Features, just below Application Development Features, and select HTTP Redirection and WebDAV Publishing. 
+Once inside the osTicket virtual machine, enable IIS in Windows. To do this, open the Control Panal in the Windows tab, click Programs, then click Turn Windows Features on or off. Check in the box for Internet Information Services and expand. Once expanded, expand World Wide Web Services, open Application Development Features and select CGI. Expand on Common HTTP Features, just below Application Development Features, select HTTP Redirection and WebDAV Publishing, and click ok to apply changes. 
 </p>
 <br />
 
