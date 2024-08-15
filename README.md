@@ -38,7 +38,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 </p>
 <p>
-  Create a virtual machine running Windows 10 with 2-4 vCPUs.  Create a resource group called osTicket-RG. No need to give it a specific location or virtual network. Once created, RDP into the osTicket virtual machine using the publice IP address, username and password you created. 
+Create a virtual machine running Windows 10 with 2-4 vCPUs.  Create a resource group called osTicket-RG. No need to give it a specific location or virtual network. Once created, RDP into the osTicket virtual machine using the publice IP address, username and password you created. 
 </p>
 <br />
 
@@ -49,7 +49,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 </p>
 <p>
-Once inside the osTicket virtual machine, enable IIS in Windows. To do this, open the Control Panal in the Windows tab, click Programs, then click Turn Windows Features on or off. Check in the box for Internet Information Services and expand. Once expanded, expand World Wide Web Services, open Application Development Features and select CGI. Expand on Common HTTP Features, just below Application Development Features, select HTTP Redirection and WebDAV Publishing, and click ok to apply changes. 
+Once inside the osTicket virtual machine, enable IIS in Windows. To do this, open the Control Panal in the Windows tab, click Programs, then click Turn Windows Features On or Off. Check in the box for Internet Information Services and expand. Once expanded, expand World Wide Web Services, open Application Development Features and select CGI. Expand on Common HTTP Features, just below Application Development Features, select HTTP Redirection and WebDAV Publishing, and click ok to apply changes. 
 </p>
 <br />
 
@@ -58,7 +58,7 @@ Once inside the osTicket virtual machine, enable IIS in Windows. To do this, ope
 
 </p>
 <p>
-Use the following link to download the all the prerequisits - https://drive.google.com/drive/u/0/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6. Once they are all downloaded, Install PHPManagerforIIS_V1.5.0.msi, followed by rewrite_amd64_en-US.msi. After both are installed, created a folder in the C: Drive and name it PHP. 
+Use the following link to download the prerequisits - https://drive.google.com/drive/u/0/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6. Once downloaded, Install PHPManagerforIIS_V1.5.0.msi, followed by rewrite_amd64_en-US.msi. After both are installed, created a folder in the (C:) Drive and name it PHP. 
 </p>
 <br />
 
@@ -66,19 +66,19 @@ Use the following link to download the all the prerequisits - https://drive.goog
 
 
 
-Once you create the PHP folder in the (C:)Drive, go to Downloads > Installation Files > php-7.3.8-nts-Win32-VC15-x86.zip and extract the file into your newly created PHP folder in your (C:)Drive. Next, install VC redist.x86.exe, and MySQL 5.5.62-win32.msi. When installing MySQL, do a typical setup and a standard configuration. Keeping a simple password for this tutorial is best for the first few times. I recommend using Password1 as your root password when setting up MySQL. 
+Once your PHP folder is created, go to Downloads > Installation Files > php-7.3.8-nts-Win32-VC15-x86.zip and extract the file into your newly created PHP folder in your (C:)Drive. Next, go back to installation files and install VC redist.x86.exe, and MySQL 5.5.62-win32.msi. When installing MySQL, do a typical setup and a standard configuration. Keeping a simple password for this tutorial is best for the first few times. I recommend using Password1 as your root password when setting up MySQL. 
 
 ![image](https://github.com/user-attachments/assets/3219d292-d096-4681-9ba5-68dfcb180185)
 
 
-Open IIS as an admin and register PHP within IIS. To register PHP, click PHP manager and Register new PHP version under PHP setup. Once the Register new PHP version window pops up, click the three dots and go to File Exploprer > This PC > Windows (C:) > PHP > php-cgi. Go back to IIS and restart the server in. To do that, click osTicket under connections, and click restart which can be found under manage server. 
+Open IIS as an admin and register PHP within IIS. To register PHP, click PHP manager and Register new PHP version under PHP setup. Once the "Register New PHP version" window pops up, click the three dots and go to File Exploprer > This PC > Windows (C:) > PHP > php-cgi. Go back to IIS and restart the server in. To do that, click osTicket under connections, and click restart which can be found under manage server. 
 
 ![image](https://github.com/user-attachments/assets/d61b5d26-03e8-486f-8e9e-0ac609cf284e)
 ![image](https://github.com/user-attachments/assets/5e574c2c-896d-46fd-82df-be5b8c60581b)
 
 
 
-Open osTicket-v1.15.8 from your downloads and drag the upload folder into File Explorer > This PC > Windows (C:) > inetpub > wwwroot. Once the upload folder has been moved to wwwroot, rename it to osTicket. Be sure to restart the server. Under connections, click Sites > Default Web Site > osTicket. Under Manage Folder on the right side, click Browse *:80(http). This will take you to the osTicket Installer page. 
+Open osTicket-v1.15.8 from your downloads and drag the upload folder into your wwwroot folder. To do this, go to File Explorer > This PC > Windows (C:) > inetpub > wwwroot. Once the upload folder has been moved to wwwroot, rename it to osTicket. Be sure to restart the server. Under connections, click Sites > Default Web Site > osTicket. Under Manage Folder on the right side, click Browse *:80(http). This will take you to the osTicket Installer page. 
 
 ![image](https://github.com/user-attachments/assets/520a8632-6944-473d-8110-970c112912bb)
 ![image](https://github.com/user-attachments/assets/fa578f4f-e932-48ca-bd8b-6e5a1730332c)
@@ -86,12 +86,12 @@ Open osTicket-v1.15.8 from your downloads and drag the upload folder into File E
 
 
 
-You may see that some extensions are not enabled. Under connections, go to Sites > Default Web Site > osTicket > Enable or disable an extension and enable php_imap.ddl, php_intl.dll, and php_opcache.dll. Refresh the osTicket Installer page and observe how PHP IMAP Extension and Intl Extension now have a green check mark by them. Next, open file explorer, go to This PC > Windows (C:) > inetpub > wwwroot > osTicket > include > ost-sampleconfig.php. Rename ost-sampleconfig.php to ost-config and go to properties > security > advanced > disable inheritance and select Remove all inherited permissions from this project. Once inheritance is disabled, click add, select a principle and add in everyone, so that everyone gets access to osTicket. 
+You may see that some extensions are not enabled. Under connections, go to Sites > Default Web Site > osTicket > Enable or disable an extension and enable php_imap.ddl, php_intl.dll, and php_opcache.dll. Refresh the osTicket Installer page and observe how PHP IMAP Extension and Intl Extension now have a green check mark by them. Next, open file explorer, go to This PC > Windows (C:) > inetpub > wwwroot > osTicket > include > ost-sampleconfig.php and rename it to ost-config.php. Once renamed, open properties > security > advanced > disable inheritance and select Remove all inherited permissions from this project. Once inheritance is disabled, click add, select a principle and add in everyone, so that everyone gets access to osTicket. Go back to osTicket and click continue. 
 
 ![image](https://github.com/user-attachments/assets/9a1c89b1-08eb-4aa8-a43f-283b83cfa21c)
 ![image](https://github.com/user-attachments/assets/f5afe729-dd94-4dc0-9b67-a36765a424dc)
 
-Fill out the system settings and Admin User information. Once you get to Database Settings, open File Explorer and install HeidiSQL_12.3.0.6589_Setup.exe. Open Heidi and click "new" on the bottom left corner and enter your MySQL password. Once inside Heidi, right click the left side of the window under Unnamed, select create new, database, and create a database called osTicket. Go back to osTicket and enter in the MySQL Database, password that you created, and the username root. 
+Fill out the system settings and Admin User information. Once you get to Database Settings, open File Explorer and install HeidiSQL_12.3.0.6589_Setup.exe. Open Heidi and click "new" on the bottom left corner and enter your MySQL password. Once inside Heidi, right click the left side of the window under Unnamed, select create new, database, and create a database called osTicket. Go back to osTicket and enter the MySQL Database osTicket, password that you created, and the username root. 
 
 ![image](https://github.com/user-attachments/assets/2341dc0e-2541-4f64-ad73-18949f32f3be)
 ![image](https://github.com/user-attachments/assets/b24444ef-cc47-4135-aaa4-f788be0fc3c9)
