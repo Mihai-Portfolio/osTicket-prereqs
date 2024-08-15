@@ -97,4 +97,4 @@ Fill out the system settings and Admin User information. Once you get to Databas
 ![image](https://github.com/user-attachments/assets/b24444ef-cc47-4135-aaa4-f788be0fc3c9)
 
 
-For clean up, make sure to delete only the setup folder in File Explorer > This PC > Windows (C:) > inetpub > wwwroot > osTicket > Setup. Lastly, go back to ost-config.php which can be found in File Explorer > This PC > Windows (C:) > inetpub > wwwroot > osTicket > include > ostconfig.php. 
+For clean up, make sure to delete only the setup folder in File Explorer > This PC > Windows (C:) > inetpub > wwwroot > osTicket > Setup. Lastly, go back to ost-config.php which can be found in File Explorer > This PC > Windows (C:) > inetpub > wwwroot > osTicket > include > ostconfig.php. The next tutorial outlines post-installation configuration of the open-source help desk ticketing system osTicket. Do not delete your virtual machine.
